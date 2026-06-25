@@ -1,0 +1,158 @@
+import {
+  Bot,
+  Brain,
+  Clapperboard,
+  Code2,
+  FileText,
+  Film,
+  Github,
+  Globe2,
+  Images,
+  Layers3,
+  MessageSquareText,
+  NotebookTabs,
+  Palette,
+  PlaySquare,
+  Sparkles,
+  TerminalSquare,
+} from "lucide-react";
+import type { LinkGroup } from "../types/link";
+
+export const linkGroups: LinkGroup[] = [
+  {
+    title: "AI",
+    description: "常用模型、问答、编码和研究入口。",
+    items: [
+      {
+        name: "ChatGPT",
+        url: "https://chatgpt.com/",
+        description: "通用 AI 助手与项目协作。",
+        icon: MessageSquareText,
+        tags: ["ai", "assistant"],
+      },
+      {
+        name: "Claude",
+        url: "https://claude.ai/",
+        description: "长文本分析与写作推理。",
+        icon: Brain,
+        tags: ["ai", "writing"],
+      },
+      {
+        name: "Gemini",
+        url: "https://gemini.google.com/",
+        description: "Google AI 助手与多模态探索。",
+        icon: Sparkles,
+        tags: ["ai", "google"],
+      },
+      {
+        name: "Codex",
+        url: "https://chatgpt.com/codex",
+        description: "代码任务、仓库修改和工程协作。",
+        icon: TerminalSquare,
+        tags: ["ai", "coding"],
+      },
+    ],
+  },
+  {
+    title: "Coding",
+    description: "开发文档、源码平台和前端工具。",
+    items: [
+      {
+        name: "GitHub",
+        url: "https://github.com/",
+        description: "仓库、Issue、PR 与 Pages 部署。",
+        icon: Github,
+        tags: ["git", "repo"],
+      },
+      {
+        name: "Vite",
+        url: "https://vite.dev/",
+        description: "前端构建与本项目开发文档。",
+        icon: Code2,
+        tags: ["vite", "frontend"],
+      },
+      {
+        name: "MDN",
+        url: "https://developer.mozilla.org/",
+        description: "Web 标准、JavaScript 和 CSS 文档。",
+        icon: Globe2,
+        tags: ["web", "docs"],
+      },
+      {
+        name: "TypeScript",
+        url: "https://www.typescriptlang.org/docs/",
+        description: "类型系统、配置和语言参考。",
+        icon: FileText,
+        tags: ["typescript", "docs"],
+      },
+    ],
+  },
+  {
+    title: "Game VFX",
+    description: "游戏特效、引擎文档和视觉参考。",
+    items: [
+      {
+        name: "Unreal Docs",
+        url: "https://dev.epicgames.com/documentation/en-us/unreal-engine",
+        description: "UE 文档、Niagara 和渲染系统。",
+        icon: Layers3,
+        tags: ["unreal", "ue", "vfx"],
+      },
+      {
+        name: "ArtStation",
+        url: "https://www.artstation.com/",
+        description: "高质量游戏美术与特效参考。",
+        icon: Images,
+        tags: ["reference", "art"],
+      },
+      {
+        name: "Pinterest",
+        url: "https://www.pinterest.com/",
+        description: "视觉灵感、构图和风格收集。",
+        icon: Palette,
+        tags: ["reference", "design"],
+      },
+      {
+        name: "YouTube VFX",
+        url: "https://www.youtube.com/results?search_query=game+vfx+niagara",
+        description: "游戏特效教程和案例搜索。",
+        icon: PlaySquare,
+        tags: ["video", "tutorial"],
+      },
+    ],
+  },
+  {
+    title: "Creation",
+    description: "视频、自媒体、文档和知识库入口。",
+    items: [
+      {
+        name: "YouTube Studio",
+        url: "https://studio.youtube.com/",
+        description: "频道管理、数据和内容发布。",
+        icon: Film,
+        tags: ["creator", "youtube"],
+      },
+      {
+        name: "Bilibili",
+        url: "https://www.bilibili.com/",
+        description: "视频平台与中文教程入口。",
+        icon: Clapperboard,
+        tags: ["video", "b站"],
+      },
+      {
+        name: "Notion",
+        url: "https://www.notion.so/",
+        description: "在线文档、数据库和项目记录。",
+        icon: NotebookTabs,
+        tags: ["docs", "notes"],
+      },
+      {
+        name: "Feishu Docs",
+        url: "https://www.feishu.cn/product/docs",
+        description: "协作文档与创作资料整理。",
+        icon: Bot,
+        tags: ["docs", "feishu"],
+      },
+    ],
+  },
+];
