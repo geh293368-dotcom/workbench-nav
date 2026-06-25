@@ -105,36 +105,40 @@ export default function Sidebar({
             关于
           </button>
         </div>
-        <div className="mt-5 flex items-center gap-2 rounded-full bg-slate-100 p-1 dark:bg-slate-900">
-          <button
+        <button
+          className="relative mt-5 grid h-11 w-full grid-cols-2 rounded-full bg-slate-100 p-1 text-slate-500 transition hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-teal-100 dark:bg-slate-900 dark:text-slate-500 dark:hover:text-slate-200 dark:focus-visible:ring-teal-500/20"
+          type="button"
+          aria-label={theme === "dark" ? "切换浅色模式" : "切换深色模式"}
+          aria-pressed={theme === "dark"}
+          title={theme === "dark" ? "切换浅色模式" : "切换深色模式"}
+          onClick={() => onThemeChange(theme === "dark" ? "light" : "dark")}
+        >
+          <span
             className={[
-              "flex h-9 flex-1 items-center justify-center rounded-full transition",
-              theme === "light"
-                ? "bg-white text-teal-700 shadow-sm dark:bg-slate-800 dark:text-teal-300"
-                : "text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-200",
+              "absolute left-1 top-1 h-9 w-[calc(50%-4px)] rounded-full shadow-sm transition-transform",
+              theme === "dark"
+                ? "translate-x-full bg-slate-800"
+                : "translate-x-0 bg-white",
             ].join(" ")}
-            type="button"
-            aria-label="浅色模式"
-            title="浅色模式"
-            onClick={() => onThemeChange("light")}
+            aria-hidden="true"
+          />
+          <span
+            className={[
+              "relative z-10 flex items-center justify-center transition",
+              theme === "light" ? "text-teal-700" : "text-slate-500 dark:text-slate-500",
+            ].join(" ")}
           >
             <SunMedium className="h-4 w-4" aria-hidden="true" />
-          </button>
-          <button
+          </span>
+          <span
             className={[
-              "flex h-9 flex-1 items-center justify-center rounded-full transition",
-              theme === "dark"
-                ? "bg-slate-800 text-teal-300 shadow-sm"
-                : "text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-200",
+              "relative z-10 flex items-center justify-center transition",
+              theme === "dark" ? "text-teal-300" : "text-slate-500",
             ].join(" ")}
-            type="button"
-            aria-label="深色模式"
-            title="深色模式"
-            onClick={() => onThemeChange("dark")}
           >
             <Moon className="h-4 w-4" aria-hidden="true" />
-          </button>
-        </div>
+          </span>
+        </button>
       </div>
     </aside>
   );
