@@ -1,0 +1,466 @@
+{
+  "groups": [
+    {
+      "id": "ai-tools",
+      "title": "AI 工具",
+      "navTitle": "AI 工具",
+      "description": "常用模型、问答、绘图和研究入口。",
+      "icon": "sparkles",
+      "items": [
+        {
+          "name": "ChatGPT",
+          "url": "https://chatgpt.com/",
+          "description": "通用 AI 助手与项目协作",
+          "brand": {
+            "label": "GPT",
+            "icon": "chatgpt.png",
+            "background": "#ecfdf5",
+            "foreground": "#047857"
+          },
+          "tags": ["ai", "assistant", "openai"]
+        },
+        {
+          "name": "Claude",
+          "url": "https://claude.ai/",
+          "description": "长文本分析与写作推理",
+          "brand": {
+            "label": "AI",
+            "icon": "claude.png",
+            "background": "#f5d0a7",
+            "foreground": "#1f2937"
+          },
+          "tags": ["ai", "writing", "anthropic"]
+        },
+        {
+          "name": "Gemini",
+          "url": "https://gemini.google.com/",
+          "description": "Google AI 助手与多模态探索",
+          "brand": {
+            "label": "G",
+            "icon": "gemini.png",
+            "background": "#eef2ff",
+            "foreground": "#2563eb"
+          },
+          "tags": ["ai", "google"]
+        },
+        {
+          "name": "Midjourney",
+          "url": "https://www.midjourney.com/",
+          "description": "图像生成与视觉探索",
+          "brand": {
+            "label": "MJ",
+            "icon": "midjourney.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["ai", "image"]
+        },
+        {
+          "name": "Perplexity",
+          "url": "https://www.perplexity.ai/",
+          "description": "联网搜索与资料研究",
+          "brand": {
+            "label": "P",
+            "icon": "perplexity.png",
+            "background": "#111827",
+            "foreground": "#ffffff"
+          },
+          "tags": ["ai", "search", "research"]
+        },
+        {
+          "name": "更多 AI 工具",
+          "description": "后续放模型、Agent 与绘图入口",
+          "icon": "grid2x2",
+          "kind": "more",
+          "tags": ["ai", "more"]
+        }
+      ]
+    },
+    {
+      "id": "video-platforms",
+      "title": "视频平台",
+      "navTitle": "视频平台",
+      "description": "视频观看、发布和素材观察入口。",
+      "icon": "clapperboard",
+      "items": [
+        {
+          "name": "YouTube",
+          "url": "https://www.youtube.com/",
+          "description": "海外教程与频道观察",
+          "brand": {
+            "label": "YT",
+            "icon": "youtube.png",
+            "background": "#fef2f2",
+            "foreground": "#dc2626"
+          },
+          "tags": ["video", "youtube"]
+        },
+        {
+          "name": "Bilibili",
+          "url": "https://www.bilibili.com/",
+          "description": "中文教程与创作平台",
+          "brand": {
+            "label": "B",
+            "icon": "bilibili.png",
+            "background": "#ecfeff",
+            "foreground": "#0891b2"
+          },
+          "tags": ["video", "b站", "bilibili"]
+        },
+        {
+          "name": "抖音",
+          "url": "https://www.douyin.com/",
+          "description": "短视频趋势和内容参考",
+          "brand": {
+            "label": "抖",
+            "icon": "douyin.png",
+            "background": "#111827",
+            "foreground": "#ffffff"
+          },
+          "tags": ["video", "short"]
+        },
+        {
+          "name": "腾讯视频",
+          "url": "https://v.qq.com/",
+          "description": "长视频平台入口",
+          "brand": {
+            "label": "▶",
+            "icon": "tencent-video.png",
+            "background": "#ecfdf5",
+            "foreground": "#16a34a"
+          },
+          "tags": ["video", "tencent"]
+        },
+        {
+          "name": "爱奇艺",
+          "url": "https://www.iqiyi.com/",
+          "description": "影视和内容平台入口",
+          "brand": {
+            "label": "iQ",
+            "icon": "iqiyi.png",
+            "background": "#ecfdf5",
+            "foreground": "#16a34a"
+          },
+          "tags": ["video", "iqiyi"]
+        },
+        {
+          "name": "更多视频平台",
+          "description": "后续放频道后台、榜单和素材库",
+          "icon": "grid2x2",
+          "kind": "more",
+          "tags": ["video", "more"]
+        }
+      ]
+    },
+    {
+      "id": "dev-tools",
+      "title": "开发工具",
+      "navTitle": "开发工具",
+      "description": "代码、文档、问题检索和前端构建入口。",
+      "icon": "code2",
+      "items": [
+        {
+          "name": "GitHub",
+          "url": "https://github.com/",
+          "description": "仓库、Issue、PR 与 Pages 部署",
+          "brand": {
+            "label": "GH",
+            "icon": "github.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["git", "repo"]
+        },
+        {
+          "name": "VS Code",
+          "url": "https://code.visualstudio.com/docs",
+          "description": "编辑器文档与扩展生态",
+          "brand": {
+            "label": "VS",
+            "icon": "vscode.png",
+            "background": "#eff6ff",
+            "foreground": "#2563eb"
+          },
+          "tags": ["editor", "coding"]
+        },
+        {
+          "name": "Vite",
+          "url": "https://vite.dev/",
+          "description": "前端构建与本项目开发文档",
+          "brand": {
+            "label": "V",
+            "icon": "vite.png",
+            "background": "#f5f3ff",
+            "foreground": "#7c3aed"
+          },
+          "tags": ["vite", "frontend"]
+        },
+        {
+          "name": "MDN Web Docs",
+          "url": "https://developer.mozilla.org/",
+          "description": "Web 标准、JavaScript 和 CSS 文档",
+          "brand": {
+            "label": "M",
+            "icon": "mdn.png",
+            "background": "#111827",
+            "foreground": "#ffffff"
+          },
+          "tags": ["web", "docs"]
+        },
+        {
+          "name": "Stack Overflow",
+          "url": "https://stackoverflow.com/",
+          "description": "工程问题检索和解决方案参考",
+          "brand": {
+            "label": "SO",
+            "icon": "stackoverflow.png",
+            "background": "#fff7ed",
+            "foreground": "#ea580c"
+          },
+          "tags": ["qa", "coding"]
+        },
+        {
+          "name": "更多开发工具",
+          "description": "后续放框架、CLI 和 API 文档",
+          "icon": "grid2x2",
+          "kind": "more",
+          "tags": ["dev", "more"]
+        }
+      ]
+    },
+    {
+      "id": "design-inspiration",
+      "title": "设计灵感",
+      "navTitle": "设计灵感",
+      "description": "视觉参考、界面设计和素材检索入口。",
+      "icon": "palette",
+      "items": [
+        {
+          "name": "Figma",
+          "url": "https://www.figma.com/",
+          "description": "界面设计和视觉稿协作",
+          "icon": "figma",
+          "brand": {
+            "label": "F",
+            "icon": "figma.png",
+            "background": "#fff7ed",
+            "foreground": "#f97316"
+          },
+          "tags": ["design", "ui"]
+        },
+        {
+          "name": "Pinterest",
+          "url": "https://www.pinterest.com/",
+          "description": "视觉灵感、构图和风格收集",
+          "brand": {
+            "label": "P",
+            "icon": "pinterest.png",
+            "background": "#fef2f2",
+            "foreground": "#dc2626"
+          },
+          "tags": ["reference", "design"]
+        },
+        {
+          "name": "Behance",
+          "url": "https://www.behance.net/",
+          "description": "作品集、视觉方向和案例参考",
+          "brand": {
+            "label": "Be",
+            "icon": "behance.png",
+            "background": "#eff6ff",
+            "foreground": "#2563eb"
+          },
+          "tags": ["design", "portfolio"]
+        },
+        {
+          "name": "Dribbble",
+          "url": "https://dribbble.com/",
+          "description": "界面、插画和品牌视觉参考",
+          "brand": {
+            "label": "D",
+            "icon": "dribbble.png",
+            "background": "#fdf2f8",
+            "foreground": "#db2777"
+          },
+          "tags": ["design", "ui"]
+        },
+        {
+          "name": "Unsplash",
+          "url": "https://unsplash.com/",
+          "description": "图片素材与视觉氛围参考",
+          "brand": {
+            "label": "U",
+            "icon": "unsplash.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["image", "photo"]
+        },
+        {
+          "name": "更多设计资源",
+          "description": "后续放配色、字体和素材站",
+          "icon": "grid2x2",
+          "kind": "more",
+          "tags": ["design", "more"]
+        }
+      ]
+    },
+    {
+      "id": "learning",
+      "title": "学习资源",
+      "navTitle": "学习资源",
+      "description": "Game VFX、引擎文档和知识库入口。",
+      "icon": "bookOpenCheck",
+      "items": [
+        {
+          "name": "Unreal Docs",
+          "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine",
+          "description": "UE 文档、Niagara 和渲染系统",
+          "brand": {
+            "label": "UE",
+            "icon": "unreal-docs.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["unreal", "ue", "vfx"]
+        },
+        {
+          "name": "Niagara",
+          "url": "https://dev.epicgames.com/documentation/en-us/unreal-engine/creating-visual-effects-in-niagara-for-unreal-engine",
+          "description": "UE Niagara 特效系统入口",
+          "icon": "layers3",
+          "brand": {
+            "label": "FX",
+            "background": "#ecfeff",
+            "foreground": "#0e7490"
+          },
+          "tags": ["niagara", "vfx"]
+        },
+        {
+          "name": "80 Level",
+          "url": "https://80.lv/",
+          "description": "游戏美术、VFX 和行业案例",
+          "brand": {
+            "label": "80",
+            "icon": "80level.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["game", "art", "vfx"]
+        },
+        {
+          "name": "ArtStation",
+          "url": "https://www.artstation.com/",
+          "description": "高质量游戏美术与特效参考",
+          "brand": {
+            "label": "AS",
+            "icon": "artstation.png",
+            "background": "#eff6ff",
+            "foreground": "#2563eb"
+          },
+          "tags": ["reference", "art"]
+        },
+        {
+          "name": "Obsidian",
+          "url": "https://obsidian.md/",
+          "description": "个人知识库与课程资料整理",
+          "brand": {
+            "label": "Ob",
+            "icon": "obsidian.png",
+            "background": "#f5f3ff",
+            "foreground": "#7c3aed"
+          },
+          "tags": ["notes", "knowledge"]
+        },
+        {
+          "name": "更多学习资源",
+          "description": "后续放课程库、文档和案例索引",
+          "icon": "grid2x2",
+          "kind": "more",
+          "tags": ["learning", "more"]
+        }
+      ]
+    },
+    {
+      "id": "common-tools",
+      "title": "常用工具",
+      "navTitle": "常用工具",
+      "description": "文档、剪辑、素材和日常工作入口。",
+      "icon": "boxes",
+      "items": [
+        {
+          "name": "Notion",
+          "url": "https://www.notion.so/",
+          "description": "在线文档、数据库和项目记录",
+          "icon": "notebookTabs",
+          "brand": {
+            "label": "N",
+            "icon": "notion.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["docs", "notes"]
+        },
+        {
+          "name": "Feishu Docs",
+          "url": "https://www.feishu.cn/product/docs",
+          "description": "协作文档与创作资料整理",
+          "icon": "send",
+          "brand": {
+            "label": "飞",
+            "icon": "feishu.png",
+            "background": "#eff6ff",
+            "foreground": "#2563eb"
+          },
+          "tags": ["docs", "feishu"]
+        },
+        {
+          "name": "Canva",
+          "url": "https://www.canva.com/",
+          "description": "快速设计、封面和轻量物料",
+          "icon": "brush",
+          "brand": {
+            "label": "C",
+            "icon": "canva.png",
+            "background": "#ecfeff",
+            "foreground": "#0891b2"
+          },
+          "tags": ["design", "creator"]
+        },
+        {
+          "name": "剪映",
+          "url": "https://www.capcut.cn/",
+          "description": "视频剪辑、字幕和短视频制作",
+          "icon": "scissors",
+          "brand": {
+            "label": "剪",
+            "icon": "capcut.png",
+            "background": "#f8fafc",
+            "foreground": "#111827"
+          },
+          "tags": ["video", "editing"]
+        },
+        {
+          "name": "Google Trends",
+          "url": "https://trends.google.com/",
+          "description": "搜索趋势、选题和内容观察",
+          "icon": "newspaper",
+          "brand": {
+            "label": "Tr",
+            "icon": "google-trends.png",
+            "background": "#fefce8",
+            "foreground": "#a16207"
+          },
+          "tags": ["trend", "research"]
+        },
+        {
+          "name": "更多常用工具",
+          "description": "后续放翻译、云盘和小工具",
+          "icon": "grid2x2",
+          "kind": "more",
+          "tags": ["tools", "more"]
+        }
+      ]
+    }
+  ]
+}
