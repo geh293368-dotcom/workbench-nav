@@ -1,4 +1,5 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, Grid2X2 } from "lucide-react";
+import { useState } from "react";
 import type { LinkItem } from "../types/link";
 
 type AppCardProps = {
@@ -6,25 +7,70 @@ type AppCardProps = {
 };
 
 export default function AppCard({ item }: AppCardProps) {
+  const [imageFailed, setImageFailed] = useState(false);
   const Icon = item.icon;
+  const isMore = item.kind === "more";
+  const href = item.url;
 
-  return (
+  const markStyle = {
+    backgroundColor: item.brand?.background ?? (isMore ? "#f8fafc" : "#f5f5f4"),
+    color: item.brand?.foreground ?? "#475569",
+  };
+
+  const content = (
+    <>
+      <div
+        className={[
+          "flex h-16 w-16 items-center justify-center rounded-2xl text-lg font-semibold shadow-sm transition",
+          isMore ? "border border-slate-200 bg-white text-slate-500 shadow-none" : "",
+        ].join(" ")}
+        style={isMore ? undefined : markStyle}
+      >
+        {isMore ? (
+          <Grid2X2 className="h-9 w-9" aria-hidden="true" />
+        ) : item.brand?.imageUrl && !imageFailed ? (
+          <img
+            className="h-10 w-10 object-contain"
+            src={item.brand.imageUrl}
+            alt=""
+            loading="lazy"
+            onError={() => setImageFailed(true)}
+          />
+        ) : Icon ? (
+          <Icon className="h-9 w-9" aria-hidden="true" />
+        ) : (
+          <span>{item.brand?.label ?? item.name.slice(0, 2)}</span>
+        )}
+      </div>
+      <div className="mt-4 text-center">
+        <h3 className="text-sm font-medium text-slate-950">{item.name}</h3>
+        {item.description ? (
+          <p className="mt-1 line-clamp-1 text-xs text-slate-500">{item.description}</p>
+        ) : null}
+      </div>
+      {href ? (
+        <ArrowUpRight className="absolute right-3 top-3 h-4 w-4 text-slate-300 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+      ) : null}
+    </>
+  );
+
+  const className = [
+    "group relative flex min-h-36 flex-col items-center justify-center rounded-lg border bg-white px-4 py-5 text-center shadow-sm outline-none transition",
+    isMore
+      ? "border-dashed border-slate-200 text-slate-500 hover:border-teal-300 hover:bg-teal-50/40"
+      : "border-slate-100 hover:-translate-y-0.5 hover:border-teal-300 hover:shadow-md focus-visible:border-teal-500 focus-visible:ring-2 focus-visible:ring-teal-100",
+  ].join(" ");
+
+  return href ? (
     <a
-      className="group flex min-h-28 flex-col justify-between rounded-lg border border-neutral-200 bg-white p-4 shadow-sm outline-none transition hover:-translate-y-0.5 hover:border-teal-600 hover:shadow-md focus-visible:border-teal-600 focus-visible:ring-2 focus-visible:ring-teal-200"
-      href={item.url}
+      className={className}
+      href={href}
       target="_blank"
       rel="noreferrer"
     >
-      <div className="flex items-start justify-between gap-3">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-neutral-100 text-neutral-800 group-hover:bg-teal-50 group-hover:text-teal-700">
-          <Icon className="h-5 w-5" aria-hidden="true" />
-        </span>
-        <ArrowUpRight className="h-4 w-4 shrink-0 text-neutral-400 transition group-hover:text-teal-700" />
-      </div>
-      <div className="mt-4">
-        <h3 className="text-base font-semibold text-neutral-950">{item.name}</h3>
-        <p className="mt-1 line-clamp-2 text-sm leading-5 text-neutral-500">{item.description}</p>
-      </div>
+      {content}
     </a>
+  ) : (
+    <div className={className}>{content}</div>
   );
 }

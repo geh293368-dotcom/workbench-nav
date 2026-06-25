@@ -6,20 +6,29 @@ type CategorySectionProps = {
 };
 
 export default function CategorySection({ group }: CategorySectionProps) {
+  const Icon = group.icon;
+
   return (
-    <section aria-labelledby={`${group.title}-heading`}>
-      <div className="mb-3 flex items-baseline justify-between gap-4">
-        <div>
-          <h2 id={`${group.title}-heading`} className="text-xl font-semibold text-neutral-950">
-            {group.title}
-          </h2>
-          <p className="mt-1 text-sm text-neutral-500">{group.description}</p>
+    <section id={group.id} className="scroll-mt-28" aria-labelledby={`${group.id}-heading`}>
+      <div className="mb-4 flex items-end justify-between gap-4">
+        <div className="flex min-w-0 items-start gap-3">
+          <span className="mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-md bg-slate-100 text-slate-600">
+            <Icon className="h-4 w-4" aria-hidden="true" />
+          </span>
+          <div className="min-w-0">
+            <h2 id={`${group.id}-heading`} className="text-lg font-semibold text-slate-950">
+              {group.title}
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">{group.description}</p>
+          </div>
         </div>
-        <span className="shrink-0 text-sm text-neutral-500">{group.items.length} 个入口</span>
+        <span className="hidden shrink-0 text-sm text-slate-400 sm:inline">
+          {group.items.length} 个入口
+        </span>
       </div>
-      <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 xl:grid-cols-6">
         {group.items.map((item) => (
-          <AppCard key={item.url} item={item} />
+          <AppCard key={`${group.id}-${item.name}`} item={item} />
         ))}
       </div>
     </section>
