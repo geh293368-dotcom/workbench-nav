@@ -26,9 +26,11 @@ export default function ClockPanel() {
 
   return (
     <div className="hidden min-w-32 text-right lg:block">
-      <p className="text-sm text-slate-500">{dateText}</p>
-      <p className="mt-1 text-sm font-medium text-slate-500">{weekdayText}</p>
-      <p className="mt-2 text-3xl font-semibold text-slate-950">{timeText}</p>
+      <p className="text-sm text-slate-500 dark:text-slate-400">{dateText}</p>
+      <p className="mt-1 text-sm font-medium text-slate-500 dark:text-slate-400">
+        {weekdayText}
+      </p>
+      <p className="mt-2 text-3xl font-semibold text-slate-950 dark:text-white">{timeText}</p>
     </div>
   );
 }

@@ -21,8 +21,10 @@ export default function AppCard({ item }: AppCardProps) {
     <>
       <div
         className={[
-          "flex h-16 w-16 items-center justify-center rounded-2xl text-lg font-semibold shadow-sm transition",
-          isMore ? "border border-slate-200 bg-white text-slate-500 shadow-none" : "",
+          "flex h-16 w-16 items-center justify-center rounded-lg text-lg font-semibold shadow-sm transition",
+          isMore
+            ? "border border-slate-200 bg-white text-slate-500 shadow-none dark:border-slate-700 dark:bg-neutral-950 dark:text-slate-400"
+            : "",
         ].join(" ")}
         style={isMore ? undefined : markStyle}
       >
@@ -43,22 +45,24 @@ export default function AppCard({ item }: AppCardProps) {
         )}
       </div>
       <div className="mt-4 text-center">
-        <h3 className="text-sm font-medium text-slate-950">{item.name}</h3>
+        <h3 className="text-sm font-medium text-slate-950 dark:text-slate-100">{item.name}</h3>
         {item.description ? (
-          <p className="mt-1 line-clamp-1 text-xs text-slate-500">{item.description}</p>
+          <p className="mt-1 line-clamp-1 text-xs text-slate-500 dark:text-slate-400">
+            {item.description}
+          </p>
         ) : null}
       </div>
       {href ? (
-        <ArrowUpRight className="absolute right-3 top-3 h-4 w-4 text-slate-300 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100" />
+        <ArrowUpRight className="absolute right-3 top-3 h-4 w-4 text-slate-300 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100 dark:text-slate-600" />
       ) : null}
     </>
   );
 
   const className = [
-    "group relative flex min-h-36 flex-col items-center justify-center rounded-lg border bg-white px-4 py-5 text-center shadow-sm outline-none transition",
+    "group relative flex min-h-36 flex-col items-center justify-center rounded-lg border bg-white px-4 py-5 text-center shadow-sm outline-none transition dark:bg-neutral-900 dark:shadow-none",
     isMore
-      ? "border-dashed border-slate-200 text-slate-500 hover:border-teal-300 hover:bg-teal-50/40"
-      : "border-slate-100 hover:-translate-y-0.5 hover:border-teal-300 hover:shadow-md focus-visible:border-teal-500 focus-visible:ring-2 focus-visible:ring-teal-100",
+      ? "border-dashed border-slate-200 text-slate-500 hover:border-teal-300 hover:bg-teal-50/40 dark:border-slate-800 dark:text-slate-400 dark:hover:border-teal-500/60 dark:hover:bg-teal-500/10"
+      : "border-slate-100 hover:-translate-y-0.5 hover:border-teal-300 hover:shadow-md focus-visible:border-teal-500 focus-visible:ring-2 focus-visible:ring-teal-100 dark:border-slate-800 dark:hover:border-teal-500/70 dark:hover:bg-slate-900 dark:focus-visible:border-teal-400 dark:focus-visible:ring-teal-500/20",
   ].join(" ");
 
   return href ? (
